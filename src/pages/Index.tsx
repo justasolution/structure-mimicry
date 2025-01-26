@@ -7,10 +7,10 @@ const Index = () => {
     <div className="min-h-screen bg-gray-100 py-8 px-4">
       <div className="a4-container welcome-gradient">
         {/* Background Logo Overlay */}
-        <div className="absolute inset-0 logo-overlay" />
+        <div className="absolute inset-0 logo-overlay opacity-10" />
         
         {/* Main Content */}
-        <div className="relative z-10 min-h-[297mm] flex flex-col items-center">
+        <div className="relative z-10 min-h-[297mm] flex flex-col">
           {/* Location Text */}
           <div className="absolute top-8 left-8">
             <h3 className="text-white text-2xl font-bold">VIJAYAWADA</h3>
@@ -26,17 +26,19 @@ const Index = () => {
           </div>
 
           {/* CNID Display with Lines */}
-          <div className="absolute top-4 right-8 flex flex-col items-start">
-            <label className="text-white text-xl font-bold mb-2">CNID: {cnid}</label>
-            <div className="space-y-2">
-              <div className="w-16 h-0.5 bg-white"></div>
-              <div className="w-16 h-0.5 bg-white"></div>
-              <div className="w-16 h-0.5 bg-white"></div>
+          <div className="absolute top-4 right-8">
+            <div className="flex flex-col items-end">
+              <span className="text-white text-xl font-bold mb-2">CNID: {cnid}</span>
+              <div className="space-y-2">
+                <div className="w-16 h-0.5 bg-white"></div>
+                <div className="w-24 h-0.5 bg-white"></div>
+                <div className="w-32 h-0.5 bg-white"></div>
+              </div>
             </div>
           </div>
 
           {/* Welcome Text */}
-          <div className="flex-grow flex flex-col items-center justify-center text-center px-4 -mt-16">
+          <div className="mt-8 text-center">
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-wider font-serif">
               WELCOME
             </h1>
@@ -46,17 +48,14 @@ const Index = () => {
           </div>
 
           {/* Main Profile Section */}
-          <div className="text-center mb-16">
-            <div className="w-48 h-48 mx-auto bg-white/20 rounded-lg border-2 border-white/30 overflow-hidden mb-4">
+          <div className="flex-grow flex items-center justify-center">
+            <div className="w-48 h-48 bg-transparent border-2 border-white rounded-lg overflow-hidden">
               <img 
                 src="/placeholder.svg"
                 alt="Main Profile"
                 className="w-full h-full object-cover"
               />
             </div>
-            <h3 className="text-white text-2xl font-bold">Md sadhik ahmed</h3>
-            <p className="text-white text-xl">LEGACY TRADERS INDIA</p>
-            <p className="text-white">PH: 812591809</p>
           </div>
 
           {/* Referred By Section - Left Aligned */}
