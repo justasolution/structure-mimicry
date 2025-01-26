@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Input } from "@/components/ui/input";
 
 const Index = () => {
-  const [cnid, setCnid] = useState('');
+  const [cnid] = useState('XYZ');
 
   return (
     <div className="min-h-screen relative overflow-hidden welcome-gradient">
@@ -14,40 +13,45 @@ const Index = () => {
         {/* Header Logo */}
         <div className="w-full max-w-md mt-8 px-4">
           <img 
-            src="/lovable-uploads/346a3394-69d9-4eea-b93c-0d18d5dc04d5.png" 
+            src="https://companionship.co.in/wp-content/uploads/2025/01/logo_comp.png" 
             alt="Companionship Logo"
             className="w-32 mx-auto"
           />
         </div>
 
-        {/* CNID Input */}
-        <div className="absolute top-4 left-4">
-          <label className="text-white text-xl font-bold">CNID:</label>
-          <Input
-            type="text"
-            value={cnid}
-            onChange={(e) => setCnid(e.target.value)}
-            className="bg-white/20 border-white/30 text-white placeholder-white/50 w-48"
-            placeholder="Enter CNID"
-          />
+        {/* CNID Display with Lines */}
+        <div className="absolute top-4 left-4 flex flex-col items-start">
+          <label className="text-white text-xl font-bold mb-2">CNID: {cnid}</label>
+          <div className="space-y-2">
+            <div className="w-16 h-0.5 bg-white"></div>
+            <div className="w-16 h-0.5 bg-white"></div>
+            <div className="w-16 h-0.5 bg-white"></div>
+          </div>
         </div>
 
         {/* Welcome Text */}
         <div className="flex-grow flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-wider">
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-wider font-serif">
             WELCOME
           </h1>
-          <h2 className="text-4xl md:text-6xl font-bold text-white tracking-wider">
+          <h2 className="text-4xl md:text-6xl font-bold text-white tracking-wider font-serif">
             ON BOARD
           </h2>
         </div>
 
-        {/* Referred By Section */}
-        <div className="mb-24 text-center">
+        {/* Referred By Section - Left Aligned */}
+        <div className="absolute bottom-24 left-8 text-left">
           <h3 className="text-accent-green text-4xl font-bold tracking-widest mb-4">
             REFERRED BY
           </h3>
-          <div className="w-48 h-48 bg-white/20 rounded-lg border-2 border-white/30" />
+          <div className="w-48 h-48 bg-white/20 rounded-lg border-2 border-white/30">
+            {/* Profile Image Placeholder */}
+            <img 
+              src="/placeholder.svg"
+              alt="Profile Placeholder"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
         </div>
 
         {/* Side Text */}
@@ -58,9 +62,9 @@ const Index = () => {
         </div>
 
         {/* Bottom Banner */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/10 py-2">
+        <div className="absolute bottom-0 left-0 right-0 bg-[#1A1F2C] py-3">
           <p className="text-white text-center text-sm md:text-base font-semibold">
-            LETS GROW TOGETHER - TO SERVE THE NATION
+            LETS GROW TOGETHER - TO SERVE THE NATION 🇮🇳
           </p>
         </div>
       </div>
